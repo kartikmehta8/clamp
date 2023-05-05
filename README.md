@@ -51,7 +51,7 @@ This repository consists of the clone of <a href="https://test.joinclamp.com/exp
 - Organized folder structure
 - Redux state management
 
-### Related projects
+### Other Frontend/Full Stack Related projects
 - [My Portfolio Website](https://kartikmehta.xyz)
 - [Codemania](https://github.com/kartikmehta8/codemania) - Codemania is an online compiler that provides code completion features using ChatGPT, analyzing results and statistics using tremor.so dashboard and YouTube video recommendation at a one-stop place with user authentication.
 - [Movie Recommendation](https://github.com/kartikmehta8/movie-recommendation) - The website where users can search for various movies and get recommendations based on search results. The website is built using React integrated with Alan AI Voice assistant & the backend consists of a Cosine Algorithm based ML Model deployed using FastAPI.
