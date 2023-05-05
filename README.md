@@ -40,6 +40,7 @@ This repository consists of the clone of <a href="https://test.joinclamp.com/exp
   - store.js
 - .gitignore
 - LICENSE
+- README.md
 - package-lock.json
 - package.json
 ```
