@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useSelector } from 'react-redux';
+import Notification from './components/NotificationBar/Notification';
+import Header from './components/Header/Header';
+import Main from './components/Main/Main';
+import Footer from './components/Footer/Footer';
 
 function App() {
+  const isDarkModeEnabled = useSelector((state) => state.isDarkModeEnabled);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      <div className={isDarkModeEnabled ? 'dark-mode' : 'light-mode'}>
+        <Notification />
+        <Header isDarkModeEnabled={isDarkModeEnabled} />
+        <Main isDarkModeEnabled={isDarkModeEnabled} />
+        <Footer />
+      </div>
+    </main>
   );
 }
 

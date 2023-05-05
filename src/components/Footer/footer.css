@@ -1,0 +1,12 @@
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20%;
+    border-top: 1px solid #e6e6e6;
+    font-size: small;
+}
+.company {
+    font-weight: 700;
+    font-size: medium;
+}

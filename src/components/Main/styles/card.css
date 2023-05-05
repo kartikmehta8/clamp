@@ -1,0 +1,40 @@
+.card-name {
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 50px;
+}
+.card-light {
+    border: 1px solid black;
+    padding: 20px;
+    margin: 10px;
+}
+.card-dark {
+    border: 1px solid #eaeaea;
+    padding: 20px;
+    margin: 10px;
+}
+.flex-card {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+}
+.flex-card-light {
+    color: gray;
+}
+.flex-card-dark {
+    color: #fff;
+}
+.card-image {
+    height: 25px;
+    margin: 2px;
+}
+.card-percentage {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 2px;
+}
+.flex-per {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,341 @@
+.center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.dark-mode-checkbox {
+    height: 40px;
+    width: 72px;
+    display: inline-block;
+    border-radius: 50px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    box-sizing: border-box;
+}
+.dark-mode-checkbox .dark-mode-checkbox__border {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: inherit;
+    position: absolute;
+    box-sizing: border-box;
+}
+.dark-mode-checkbox .dark-mode-checkbox__background {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border-radius: inherit;
+    position: absolute;
+    box-sizing: border-box;
+    background: #bae2f7;
+    top: 2px;
+    left: 2px;
+    border: 1px solid #bae2f7;
+    z-index: 0;
+}
+.dark-mode-checkbox .dark-mode-checkbox__border {
+    border: 1px solid #707070;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.dark-mode-checkbox__input {
+    width: 0;
+    height: 0;
+    opacity: 0.01;
+    position: absolute;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__circle {
+    transform: translateX(120%);
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__circle:before {
+    background-color: #f4dfa1;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__circle:after {
+    border-color: #fff;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__circle .dark-mode-checkbox__moon-details {
+    opacity: 1;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__clouds {
+    opacity: 0;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__stars {
+    opacity: 1;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__background {
+    background-color: #383348;
+    border-color: #383348;
+    opacity: 1;
+}
+.dark-mode-checkbox__input:checked ~ .dark-mode-checkbox__border {
+    border-color: #fff;
+}
+.dark-mode-checkbox__hidden-text {
+    width: 0px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+.dark-mode-checkbox__circle {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 6px;
+    top: 6px;
+    transition: all 0.3s;
+    z-index: 1;
+}
+.dark-mode-checkbox__circle:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    border: 1px solid #707070;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+.dark-mode-checkbox__circle:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fccf4a;
+    display: inline-block;
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    left: 2px;
+    top: 2px;
+    box-sizing: border-box;
+}
+.dark-mode-checkbox__moon-details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.dark-mode-checkbox__moon-detail, .dark-mode-checkbox__moon-detail--1, .dark-mode-checkbox__moon-detail--2, .dark-mode-checkbox__moon-detail--3, .dark-mode-checkbox__moon-detail--4, .dark-mode-checkbox__moon-detail--5 {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.15);
+    display: inline-block;
+}
+.dark-mode-checkbox__moon-detail--1 {
+    top: 4px;
+    left: 5px;
+}
+.dark-mode-checkbox__moon-detail--2 {
+    top: 9px;
+    left: 6px;
+    transform: scale(1.2);
+}
+.dark-mode-checkbox__moon-detail--3 {
+    top: 3px;
+    left: 10px;
+}
+.dark-mode-checkbox__moon-detail--4 {
+    top: 7px;
+    left: 12px;
+}
+.dark-mode-checkbox__moon-detail--5 {
+    top: 12px;
+    left: 10px;
+}
+.dark-mode-checkbox__clouds {
+    transition: all 0.3s;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.dark-mode-checkbox__cloud, .dark-mode-checkbox__cloud--1, .dark-mode-checkbox__cloud--2 {
+    display: inline-block;
+    height: 8px;
+    width: 28px;
+    border-radius: 50px;
+    background-color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    -webkit-animation: nuvem 15s linear infinite;
+    animation: nuvem 15s linear infinite;
+}
+.dark-mode-checkbox__cloud--1 {
+    -webkit-animation: cloud-movement 2.5s linear infinite alternate;
+    animation: cloud-movement 2.5s linear infinite alternate;
+}
+.dark-mode-checkbox__cloud--2 {
+    top: 24px;
+    left: 28px;
+    transform: scale(0.8) rotateY(180deg);
+    -webkit-animation: cloud2-movement 2.5s linear infinite alternate;
+    animation: cloud2-movement 2.5s linear infinite alternate;
+}
+.dark-mode-checkbox__cloud:before, .dark-mode-checkbox__cloud--1:before, .dark-mode-checkbox__cloud--2:before, .dark-mode-checkbox__cloud:after, .dark-mode-checkbox__cloud--1:after, .dark-mode-checkbox__cloud--2:after {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    bottom: 0;
+    position: absolute;
+}
+.dark-mode-checkbox__cloud:after, .dark-mode-checkbox__cloud--1:after, .dark-mode-checkbox__cloud--2:after {
+    width: 14px;
+    height: 14px;
+    right: 6px;
+    bottom: 1px;
+}
+.dark-mode-checkbox__stars {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.dark-mode-checkbox__star, .dark-mode-checkbox__star--1, .dark-mode-checkbox__star--2, .dark-mode-checkbox__star--3, .dark-mode-checkbox__star--4, .dark-mode-checkbox__star--5, .dark-mode-checkbox__star--6, .dark-mode-checkbox__star--7, .dark-mode-checkbox__star--8, .dark-mode-checkbox__star--9 {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    -webkit-animation: fade-in 2s linear infinite alternate;
+    animation: fade-in 2s linear infinite alternate;
+}
+.dark-mode-checkbox__star--1 {
+    top: 28px;
+    left: 12px;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.dark-mode-checkbox__star--2 {
+    top: 28px;
+    left: 32px;
+    animation-delay: 0.6s;
+}
+.dark-mode-checkbox__star--3 {
+    top: 10px;
+    left: 12px;
+    animation-delay: 0.9s;
+}
+.dark-mode-checkbox__star--4 {
+    top: 18px;
+    left: 26px;
+    animation-delay: 1.2s;
+}
+.dark-mode-checkbox__star--5 {
+    top: 5px;
+    left: 22px;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+.dark-mode-checkbox__star--6 {
+    top: 17px;
+    left: 11px;
+    -webkit-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+.dark-mode-checkbox__star--7 {
+    top: 14px;
+    left: 20px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+.dark-mode-checkbox__star--8 {
+    top: 24px;
+    left: 20px;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+.dark-mode-checkbox__star--9 {
+    top: 7px;
+    left: 34px;
+    animation: falling 5s 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+@-webkit-keyframes cloud-movement {
+    0% {
+        transform: translateX(-4px);
+   }
+    to {
+        transform: translateX(3px);
+   }
+}
+@keyframes cloud-movement {
+    0% {
+        transform: translateX(3px);
+   }
+    to {
+        transform: translateX(13px);
+   }
+}
+@-webkit-keyframes cloud2-movement {
+    0% {
+        transform: scale(0.8) rotateY(180deg) translateX(-8px);
+   }
+    to {
+        transform: scale(0.8) rotateY(180deg) translateX(3px);
+   }
+}
+@keyframes cloud2-movement {
+    0% {
+        transform: scale(0.8) rotateY(180deg) translateX(-8px);
+   }
+    to {
+        transform: scale(0.8) rotateY(180deg) translateX(3px);
+   }
+}
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+   }
+    to {
+        opacity: 1;
+   }
+}
+@keyframes falling {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg);
+   }
+    6% {
+        opacity: 0.7;
+        width: 30px;
+        height: 1px;
+        transform: rotate(-45deg) translate(-30px, -10px);
+   }
+    10% {
+        width: 2px;
+        height: 2px;
+        transform: rotate(-45deg) translate(-32px, 0px);
+        opacity: 0;
+   }
+    100% {
+        opacity: 0;
+        transform: rotate(-45deg) translate(-32px, 0px);
+   }
+}
