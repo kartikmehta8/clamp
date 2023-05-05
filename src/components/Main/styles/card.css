@@ -6,12 +6,12 @@
 .card-light {
     border: 1px solid black;
     padding: 20px;
-    margin: 10px;
+    margin: 0 10px;
 }
 .card-dark {
     border: 1px solid #eaeaea;
     padding: 20px;
-    margin: 10px;
+    margin: 0 10px;
 }
 .flex-card {
     display: flex;
@@ -37,4 +37,22 @@
 .flex-per {
     display: flex;
     justify-content: space-between;
+}
+.buy-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+.buy-light {
+    background-color: #000;
+    color: #fff;
+}
+.buy-dark {
+    background-color: #fff;
+    color: rgb(15 23 42);
+    font-weight: 500;
 }
